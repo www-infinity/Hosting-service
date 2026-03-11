@@ -8,6 +8,8 @@ import {
   CheckCircle,
   Cpu,
   FlaskConical,
+  CreditCard,
+  Shield,
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -284,6 +286,159 @@ export default function ConnectPage() {
               </li>
             ))}
           </ol>
+        </section>
+
+        {/* Payment & Service Authorization Section */}
+        <section aria-labelledby="payment-setup-heading">
+          <h2
+            id="payment-setup-heading"
+            className="text-2xl font-bold text-white mb-8 flex items-center gap-3"
+          >
+            <CreditCard className="w-6 h-6 text-amber-400" aria-hidden="true" />
+            Payment Setup &amp; Service Authorization
+          </h2>
+
+          <div className="space-y-6">
+            <div className="rounded-xl border-2 border-amber-500/30 bg-amber-500/5 p-6">
+              <div className="flex items-start gap-4">
+                <Shield className="w-6 h-6 text-amber-400 shrink-0 mt-1" aria-hidden="true" />
+                <div className="space-y-4">
+                  <h3 className="text-lg font-bold text-white">
+                    Payment Processing Not Yet Configured
+                  </h3>
+                  <div className="space-y-3 text-sm text-slate-300 leading-relaxed">
+                    <p>
+                      <strong className="text-amber-400">Important:</strong> Before HydrHost can
+                      accept payments or activate paid services, the following authorization and
+                      setup requirements must be completed by the service operator:
+                    </p>
+
+                    <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-5 space-y-3">
+                      <h4 className="text-white font-semibold">Required Setup Steps:</h4>
+                      <ol className="space-y-2 list-decimal list-inside text-slate-400">
+                        <li>
+                          <strong className="text-slate-300">PayPal Business Account Setup</strong>
+                          <ul className="ml-6 mt-1 space-y-1 list-disc list-inside text-xs">
+                            <li>Verify PayPal account: watsonkris611@gmail.com</li>
+                            <li>Upgrade to PayPal Business account if needed</li>
+                            <li>Complete identity verification and business documentation</li>
+                            <li>Configure payment receiving settings and currency preferences</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong className="text-slate-300">Payment Gateway Integration</strong>
+                          <ul className="ml-6 mt-1 space-y-1 list-disc list-inside text-xs">
+                            <li>Integrate PayPal REST API or Checkout SDK</li>
+                            <li>Set up secure webhook endpoints for payment notifications</li>
+                            <li>Implement payment processing backend infrastructure</li>
+                            <li>Test payment flows in sandbox environment</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong className="text-slate-300">User Authentication System</strong>
+                          <ul className="ml-6 mt-1 space-y-1 list-disc list-inside text-xs">
+                            <li>Implement secure user login and registration</li>
+                            <li>Set up session management and authorization</li>
+                            <li>Create user account dashboard for payment management</li>
+                            <li>Enable users to view payment history and manage subscriptions</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong className="text-slate-300">Legal &amp; Compliance</strong>
+                          <ul className="ml-6 mt-1 space-y-1 list-disc list-inside text-xs">
+                            <li>Publish Terms of Service and Privacy Policy</li>
+                            <li>Define and publish Refund and Cancellation Policy</li>
+                            <li>Ensure PCI DSS compliance for payment data handling</li>
+                            <li>Register business entity and obtain necessary licenses</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <strong className="text-slate-300">Service Infrastructure</strong>
+                          <ul className="ml-6 mt-1 space-y-1 list-disc list-inside text-xs">
+                            <li>Deploy actual hosting infrastructure (not demonstration)</li>
+                            <li>Set up monitoring, alerting, and support systems</li>
+                            <li>Establish SLA tracking and incident response procedures</li>
+                            <li>Create customer support channels and documentation</li>
+                          </ul>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <div className="rounded-lg bg-slate-900 border border-slate-800 p-4">
+                      <div className="flex items-start gap-3">
+                        <CreditCard className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" aria-hidden="true" />
+                        <div className="space-y-2">
+                          <h4 className="text-white font-semibold text-sm">Payment Account Information</h4>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                            <div>
+                              <span className="text-slate-500">PayPal Account:</span>
+                              <div className="text-white font-mono mt-1">watsonkris611@gmail.com</div>
+                            </div>
+                            <div>
+                              <span className="text-slate-500">Status:</span>
+                              <div className="text-amber-400 font-semibold mt-1">⚠ Pending Setup</div>
+                            </div>
+                            <div>
+                              <span className="text-slate-500">Payment Gateway:</span>
+                              <div className="text-slate-400 mt-1">Not Integrated</div>
+                            </div>
+                            <div>
+                              <span className="text-slate-500">User Authentication:</span>
+                              <div className="text-slate-400 mt-1">Not Implemented</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p className="text-xs text-slate-400 pt-2">
+                      <strong>Note:</strong> This is currently a demonstration website. No actual
+                      hosting services are operational, and no payment processing is active. Users
+                      will not be charged until all setup requirements are completed and explicitly
+                      authorized by the service operator.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-xl glass p-6">
+              <h3 className="text-white font-semibold mb-4 flex items-center gap-2">
+                <Shield className="w-5 h-5 text-cyan-400" aria-hidden="true" />
+                User Protection &amp; Transparency Commitment
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                  <h4 className="text-white font-semibold mb-2">No Hidden Charges</h4>
+                  <p className="text-slate-400 text-xs">
+                    Users will only be charged after explicitly authorizing payment through
+                    a secure login and checkout process. No automatic billing without consent.
+                  </p>
+                </div>
+                <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                  <h4 className="text-white font-semibold mb-2">Clear Authorization</h4>
+                  <p className="text-slate-400 text-xs">
+                    Every payment will require user login and explicit authorization. Payment
+                    recipient information will be clearly displayed before checkout.
+                  </p>
+                </div>
+                <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                  <h4 className="text-white font-semibold mb-2">Service Delivery First</h4>
+                  <p className="text-slate-400 text-xs">
+                    Billing will only begin after services are fully operational and
+                    tested. No charges for demonstration or non-functional features.
+                  </p>
+                </div>
+                <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                  <h4 className="text-white font-semibold mb-2">Full Refund Policy</h4>
+                  <p className="text-slate-400 text-xs">
+                    A comprehensive refund policy will be published and enforced before
+                    any payment processing begins. Users can cancel anytime.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Copilot config section */}

@@ -8,6 +8,7 @@ import {
   Server,
   Thermometer,
   Wifi,
+  AlertTriangle,
 } from "lucide-react";
 import type { Feature } from "@/types";
 import TerminalPing from "@/components/TerminalPing";
@@ -294,6 +295,35 @@ export default function HomePage() {
             Register with a hydrogen network operator, configure your shell nodes,
             and deploy to the infrastructure-less internet — no gatekeepers required.
           </p>
+
+          {/* Payment Disclaimer */}
+          <div className="rounded-xl border-2 border-amber-500/30 bg-amber-500/5 p-6 text-left">
+            <div className="flex items-start gap-3">
+              <AlertTriangle
+                className="w-5 h-5 text-amber-400 shrink-0 mt-0.5"
+                aria-hidden="true"
+              />
+              <div className="space-y-2">
+                <p className="text-sm text-slate-300">
+                  <strong className="text-amber-400">Demonstration Site:</strong> This is a
+                  concept website. No payment processing or actual hosting services are
+                  currently operational. Payment setup requires authorization from the service
+                  operator (watsonkris611@gmail.com) and proper infrastructure deployment.
+                </p>
+                <p className="text-xs text-slate-400">
+                  See{" "}
+                  <Link
+                    href="/services"
+                    className="text-cyan-400 hover:underline font-medium"
+                  >
+                    Payment Information
+                  </Link>{" "}
+                  for complete details on authorization requirements and transparency commitments.
+                </p>
+              </div>
+            </div>
+          </div>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/connect"
