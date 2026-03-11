@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Zap } from "lucide-react";
+import { Check, Zap, AlertTriangle, Shield } from "lucide-react";
 import type { PricingTier } from "@/types";
 
 export const metadata: Metadata = {
@@ -148,6 +148,110 @@ export default function ServicesPage() {
               </Link>
             </article>
           ))}
+        </div>
+
+        {/* Payment Authorization Notice */}
+        <div
+          className="mt-16 rounded-xl border-2 border-amber-500/30 bg-amber-500/5 p-8"
+          role="alert"
+          aria-labelledby="payment-notice-heading"
+        >
+          <div className="flex items-start gap-4">
+            <AlertTriangle
+              className="w-6 h-6 text-amber-400 shrink-0 mt-1"
+              aria-hidden="true"
+            />
+            <div className="space-y-4 flex-1">
+              <h2
+                id="payment-notice-heading"
+                className="text-xl font-bold text-white"
+              >
+                Important Payment Authorization Notice
+              </h2>
+              <div className="space-y-3 text-slate-300 text-sm leading-relaxed">
+                <p>
+                  <strong className="text-amber-400">This is a demonstration/concept website.</strong>{" "}
+                  No payment processing is currently active. The pricing plans shown above
+                  are informational only and do not constitute an active service offering.
+                </p>
+                <p>
+                  Before any payment processing becomes operational, proper authorization
+                  and setup must be completed by the service operator. This includes:
+                </p>
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Verified PayPal Business account setup</li>
+                  <li>Proper payment gateway integration and testing</li>
+                  <li>Terms of service and refund policy documentation</li>
+                  <li>Compliance with payment processing regulations</li>
+                  <li>Transparent disclosure of payment recipient information</li>
+                </ul>
+                <p className="pt-2">
+                  <strong>For questions about payment setup or service authorization, contact:</strong>
+                </p>
+                <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4 font-mono text-xs">
+                  <div className="text-cyan-400">PayPal Account (Pending Setup):</div>
+                  <div className="text-white mt-1">watsonkris611@gmail.com</div>
+                  <div className="text-slate-500 mt-3">
+                    Status: Payment processing not yet authorized or configured
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Trust & Transparency Section */}
+        <div className="mt-12 rounded-xl glass p-8">
+          <div className="flex items-start gap-4">
+            <Shield
+              className="w-6 h-6 text-cyan-400 shrink-0 mt-1"
+              aria-hidden="true"
+            />
+            <div className="space-y-4 flex-1">
+              <h2 className="text-xl font-bold text-white">
+                Trust & Transparency Commitment
+              </h2>
+              <div className="space-y-3 text-slate-300 text-sm leading-relaxed">
+                <p>
+                  HydrHost is committed to transparent operations. Before accepting any payments:
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                  <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                    <h3 className="text-white font-semibold mb-2">Payment Recipient</h3>
+                    <p className="text-slate-400 text-xs">
+                      All payment recipient details will be clearly disclosed, including
+                      legal business name, registration number, and contact information.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                    <h3 className="text-white font-semibold mb-2">Service Delivery</h3>
+                    <p className="text-slate-400 text-xs">
+                      Services will only be billed after proper infrastructure setup,
+                      testing, and verification of service availability.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                    <h3 className="text-white font-semibold mb-2">Authorization</h3>
+                    <p className="text-slate-400 text-xs">
+                      User login and authentication will be required before any payment
+                      processing is enabled. No charges without explicit user authorization.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-slate-900/50 border border-slate-700 p-4">
+                    <h3 className="text-white font-semibold mb-2">Refund Policy</h3>
+                    <p className="text-slate-400 text-xs">
+                      A clear refund and cancellation policy will be established and
+                      published before payment processing begins.
+                    </p>
+                  </div>
+                </div>
+                <p className="pt-4 text-xs text-slate-400">
+                  This website is currently in development/demonstration mode. No actual hosting
+                  infrastructure or payment processing is operational at this time.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
