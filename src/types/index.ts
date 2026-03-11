@@ -40,3 +40,41 @@ export interface MetricCard {
   unit: string;
   trend: "up" | "down" | "stable";
 }
+
+export interface FrequencyTier {
+  id: "hyperfine" | "vibrational";
+  label: string;
+  frequencyHz: number;
+  frequencyDisplay: string;
+  wavelength: string;
+  mechanism: string;
+  application: string;
+  cyclesPerSecond: string;
+}
+
+export interface NanoMaterial {
+  id: string;
+  name: string;
+  type: "clathrasil" | "core-shell" | "borohydride" | "composite";
+  storageCapacity: string;
+  releaseTemp: string;
+  description: string;
+  reference: string;
+}
+
+export interface ThermalSpec {
+  property: string;
+  value: string;
+  unit: string;
+  comparison: string;
+}
+
+export interface CitationEntry {
+  id: string;
+  index: number;
+  authors: string;
+  title: string;
+  journal: string;
+  year: number;
+  url: string;
+}
