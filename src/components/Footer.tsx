@@ -9,14 +9,16 @@ const FOOTER_SECTIONS: FooterSection[] = [
       { label: "Services", href: "/services" },
       { label: "Dashboard", href: "/dashboard" },
       { label: "System Status", href: "/status" },
+      { label: "Signal Generator", href: "/signal" },
     ],
   },
   {
-    heading: "Company",
+    heading: "Technology",
     links: [
-      { label: "About", href: "/about" },
-      { label: "Blog", href: "/blog" },
-      { label: "Careers", href: "/careers" },
+      { label: "Research", href: "/research" },
+      { label: "Architecture", href: "/technology" },
+      { label: "Connect", href: "/connect" },
+      { label: "Deploy", href: "/deploy" },
     ],
   },
   {

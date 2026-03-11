@@ -78,3 +78,30 @@ export interface CitationEntry {
   year: number;
   url: string;
 }
+
+export type SpinState = "para" | "ortho";
+export type BitEdge = "rising" | "falling" | "stable";
+
+export interface ThermalHarvestEvent {
+  nodeId: string;
+  timestamp: string;
+  shellCoolingRate: number;
+  coreHeatRate: number;
+  deltaT: number;
+  energyHarvestedJoules: number;
+}
+
+export interface LatencyReading {
+  id: string;
+  nodeId: string;
+  latencyMs: number;
+  spinState: SpinState;
+  timestamp: string;
+  hops: number;
+}
+
+export interface TerminalCommand {
+  verb: string;
+  args: string[];
+  raw: string;
+}
